@@ -7,9 +7,7 @@ import { DateTime } from "luxon";
 // const Dotenv = require('dotenv-webpack');
 
 const getWeatherData = (infoType, searchParams) => {
-  const url = new URL(
-    "https://api.openweathermap.org/data/2.5" + "/" + infoType
-  );
+  const url = new URL(process.env.REACT_APP_BASE_URL + "/" + infoType);
   url.search = new URLSearchParams({
     ...searchParams,
     appid: process.env.REACT_APP_API_KEY,

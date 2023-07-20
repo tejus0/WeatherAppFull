@@ -10,8 +10,9 @@ function Inputs({ setQuery, units, setUnits }) {
     if (units !== selectedUnit) setUnits(selectedUnit);
   };
 
-  const handleSearchClick = () => {
-    if (city !== "") setQuery({ q: city });
+  const handleSearchClick = (searchItem) => {
+    // if (city !== "") setQuery({ q: city });
+    console.log("search" ,searchItem );
   };
 
   const handleLocationClick = () => {
@@ -43,7 +44,7 @@ function Inputs({ setQuery, units, setUnits }) {
         <UilSearch
           size={25}
           className="text-white cursor-pointer transition ease-out hover:scale-125"
-          onClick={handleSearchClick}
+          onClick={()=>handleSearchClick(city)}
         />
         <UilLocationPoint
           size={25}

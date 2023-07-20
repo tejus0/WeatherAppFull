@@ -1,13 +1,19 @@
 import { DateTime } from "luxon";
-
-const API_KEY = "5978377246b43ba167c78e60c726f04d";
-const BASE_URL = "https://api.openweathermap.org/data/2.5";
-
+// import 'dotenv/config'
+// require("dotenv").config();
 // https://api.openweathermap.org/data/2.5/onecall?lat=48.8534&lon=2.3488&exclude=current,minutely,hourly,alerts&appid=1fa9ff4126d95b8db54f3897a208e91c&units=metric
 
+// const Dotenv = require("dotenv");
+// const Dotenv = require('dotenv-webpack');
+
 const getWeatherData = (infoType, searchParams) => {
-  const url = new URL(BASE_URL + "/" + infoType);
-  url.search = new URLSearchParams({ ...searchParams, appid: API_KEY });
+  const url = new URL(
+    "https://api.openweathermap.org/data/2.5" + "/" + infoType
+  );
+  url.search = new URLSearchParams({
+    ...searchParams,
+    appid: process.env.REACT_APP_API_KEY,
+  });
 
   return fetch(url).then((res) => res.json());
 };

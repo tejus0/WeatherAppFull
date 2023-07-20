@@ -42,25 +42,25 @@ function App() {
   };
 
   return (
-      <div
-        className={`bg-gradient-to-r from-purple-500 to-pink-500 px-32 `} // shadow-xl shadow-gray-400 h-14  mx-auto max-w-screen-md mt-4 py-5 px-32 h-fit 
+    <div
+      className={`bg-gradient-to-r from-purple-500 to-pink-500 px-32 `} // shadow-xl shadow-gray-400 h-14  mx-auto max-w-screen-md mt-4 py-5 px-32 h-fit
       // style={{backgroundImage: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3gtB44Awjafm_0H_ye1RDTdUBO3AHM_FCJKLau3ZSsQ&s')"}}
-      >
-        <TopButtons setQuery={setQuery} />
-        <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
+    >
+      <TopButtons setQuery={setQuery} />
+      <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
 
-        {weather && (
-          <div>
-            <TimeAndLocation weather={weather} />
-            <TemperatureAndDetails weather={weather} />
+      {weather && (
+        <div>
+          <TimeAndLocation weather={weather} />
+          <TemperatureAndDetails weather={weather} />
 
-            <Forecast title="hourly forecast" items={weather.hourly} />
-            <Forecast title="daily forecast" items={weather.daily} />
-          </div>
-        )}
+          <Forecast title="hourly forecast" items={weather.hourly} />
+          <Forecast title="daily forecast" items={weather.daily} />
+        </div>
+      )}
 
-        <ToastContainer autoClose={5000} theme="colored" newestOnTop={true} />
-      </div>
+      <ToastContainer autoClose={5000} theme="colored" newestOnTop={true} />
+    </div>
   );
 }
 

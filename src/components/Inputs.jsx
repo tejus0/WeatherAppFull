@@ -11,8 +11,8 @@ function Inputs({ setQuery, units, setUnits }) {
   };
 
   const handleSearchClick = (searchItem) => {
-    // if (city !== "") setQuery({ q: city });
-    console.log("search" ,searchItem );
+    if (city !== "") setQuery({ q: city });
+    // console.log("search" ,searchItem );
   };
 
   const handleLocationClick = () => {

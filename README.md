@@ -25,6 +25,12 @@ WeatherAppFull is a web application that displays weather details of any locatio
 
 A live demo of the WeatherAppFull can be found [here](https://example.com/weatherappfull-demo).
 
+
+
+https://github.com/tejus0/WeatherAppFull/assets/76488943/a37a7a3e-8288-409a-84ff-0ce1832368d6
+
+
+
 ## Installation
 
 To run WeatherAppFull locally, follow these steps:

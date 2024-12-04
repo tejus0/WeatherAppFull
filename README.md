@@ -6,9 +6,13 @@ Here is the updated **README** file for your GitHub repository, incorporating th
 
 **WeatherAppFull** is a responsive web application that displays real-time weather details of any location using the OpenWeather API. This project provides users with current weather insights, 5-day forecasts, and visually dynamic UI components, making it an excellent addition to portfolios.
 
-![WeatherAppFull Screenshot](/path/to/screenshot.png)
+![image](https://github.com/user-attachments/assets/6f9f3f5c-f772-47f5-ae47-7544b95e9abb)
 
-https://github.com/tejus0/WeatherAppFull/assets/76488943/a37a7a3e-8288-409a-84ff-0ce1832368d6
+![image](https://github.com/user-attachments/assets/def3fe9f-edec-403b-a63e-dfb6e1ddadeb)
+
+![image](https://github.com/user-attachments/assets/a79c093c-43dd-4189-9ed5-fc5ef179c283)
+
+
 
 ---
 
@@ -41,9 +45,13 @@ A live demo of **WeatherAppFull** can be found [here](https://regal-belekoy-dcd2
 
 Preview the app in action below:
 
-[![WeatherAppFull Demo Video](https://github.com/tejus0/WeatherAppFull/assets/76488943/a37a7a3e-8288-409a-84ff-0ce1832368d6)](https://example.com/weatherappfull-demo)
+[![WeatherAppFull Demo Video]
 
 ---
+
+https://github.com/user-attachments/assets/41f4f0e9-7baa-4448-90f8-452c52f728a5
+
+
 
 ## 🚀 Installation
 

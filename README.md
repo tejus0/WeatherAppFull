@@ -37,7 +37,7 @@ https://github.com/tejus0/WeatherAppFull/assets/76488943/a37a7a3e-8288-409a-84ff
 
 ## 🎥 Demo
 
-A live demo of **WeatherAppFull** can be found [here](https://example.com/weatherappfull-demo).
+A live demo of **WeatherAppFull** can be found [here](https://regal-belekoy-dcd2d0.netlify.app/).
 
 Preview the app in action below:
 

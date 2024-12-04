@@ -75,9 +75,11 @@ The application will be accessible at `http://localhost:3000` in your web browse
 ## 🛠️ Usage
 
 1. On loading, the app will request access to your location to fetch current weather. Alternatively, you can search for any city.
-2. View details such as temperature, humidity, wind speed, and current time for your chosen location.
-3. Toggle between Celsius (°C) and Fahrenheit (°F) for temperature readings.
-4. Access a detailed 5-day forecast by scrolling through the page.
+2. Suggestions while searching the city are also available for assistance.
+3. View details such as temperature, humidity, wind speed, and current time for your chosen location.
+4. Toggle between Celsius (°C) and Fahrenheit (°F) for temperature readings.
+5. Access a detailed 5-day forecast by scrolling through the page.
+6. At last the data visualization of charts can be seen for quick understanding of future variations throughout the week.
 
 ---
 
@@ -87,7 +89,10 @@ The application will be accessible at `http://localhost:3000` in your web browse
 2. Add your API key to a `.env` file in the root of your project directory:
 
 ```plaintext
-REACT_APP_WEATHER_API_KEY=your_openweather_api_key_here
+REACT_APP_BASE_URL = "https://api.openweathermap.org/data/2.5"
+REACT_APP_API_KEY = 
+REACT_APP_RAPIDAPI_KEY=
+REACT_APP_RAPIDAPI_HOST='wft-geo-db.p.rapidapi.com'
 ```
 
 3. Restart the development server after saving the file.

@@ -7,6 +7,7 @@ import {
   UilSunset,
 } from "@iconscout/react-unicons";
 import { formatToLocalTime, iconUrlFromCode } from "../services/weatherService";
+import WeatherIcon from "./WeatherIcon"
 
 function TemperatureAndDetails({
   weather: {
@@ -21,17 +22,19 @@ function TemperatureAndDetails({
     humidity,
     feels_like,
     timezone,
-  },
+  },units,
 }) {
+  console.log(typeof(sunrise),typeof(sunset),typeof(timezone),feels_like,"all in temp");
   return (
     <div>
       <div className="flex items-center justify-center py-6 text-xl text-cyan-300">
+      {/* <WeatherIcon condition={details.condition} /> */}
         <p>{details}</p>
       </div>
 
       <div className="flex flex-row items-center justify-between text-white py-3">
         <img src={iconUrlFromCode(icon)} alt="" className="w-20" />
-        <p className="text-5xl">{`${temp.toFixed()}°`}</p>
+        <p className="text-5xl">{`${temp.toFixed()}° ${units==='metric' ? 'C' : 'F'}`}</p>
         <div className="flex flex-col space-y-2">
           <div className="flex font-light text-sm items-center justify-center">
             <UilTemperature size={18} className="mr-1" />
@@ -46,7 +49,7 @@ function TemperatureAndDetails({
           <div className="flex font-light text-sm items-center justify-center">
             <UilWind size={18} className="mr-1" />
             Wind:
-            <span className="font-medium ml-1">{`${speed.toFixed()} km/h`}</span>
+            <span className="font-medium ml-1"> {`${speed.toFixed()} ${units==='metric' ? "km/h" : "m/s"}`}</span>
           </div>
         </div>
       </div>
@@ -56,7 +59,7 @@ function TemperatureAndDetails({
         <p className="font-light">
           Rise:{" "}
           <span className="font-medium ml-1">
-            {formatToLocalTime(sunrise, timezone, "hh:mm a")}
+            {sunrise}
           </span>
         </p>
         <p className="font-light">|</p>
@@ -65,7 +68,7 @@ function TemperatureAndDetails({
         <p className="font-light">
           Set:{" "}
           <span className="font-medium ml-1">
-            {formatToLocalTime(sunset, timezone, "hh:mm a")}
+            {sunset}
           </span>
         </p>
         <p className="font-light">|</p>

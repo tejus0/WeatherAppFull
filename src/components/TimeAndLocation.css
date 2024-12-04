@@ -1,0 +1,15 @@
+.time-location {
+  text-align: center;
+  margin: 20px 0;
+  color: white;
+}
+
+.time {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.location {
+  font-size: 2rem;
+  font-weight: bold;
+}

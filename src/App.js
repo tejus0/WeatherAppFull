@@ -18,6 +18,8 @@ function App() {
   // const [city, setCity] = useState("Faridabad");  // Added city state here
   const [error, setError] = useState(null);
 const [loading, setLoading] = useState(false);
+const [topButton, setTopButton] = useState("")
+
 
 
   useEffect(() => {
@@ -126,8 +128,8 @@ const [loading, setLoading] = useState(false);
       className={` max-w-screen-2xl py-5 bg-gradient-to-br shadow-xl shadow-gray-400 px-32 ${weatherClass}`} // shadow-xl shadow-gray-400 h-14  mx-auto max-w-screen-md mt-4 py-5 px-32 h-fit
       // style={{backgroundImage: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3gtB44Awjafm_0H_ye1RDTdUBO3AHM_FCJKLau3ZSsQ&s')"}}
     >
-      <TopButtons setQuery={setQuery} />
-      <Inputs setQuery={setQuery} setUnits={setUnits} setError={setError} />
+      <TopButtons setQuery={setQuery} setTopButton={setTopButton} />
+      <Inputs setQuery={setQuery} setUnits={setUnits} setError={setError} topButton={topButton} setTopButton={setTopButton} />
 
       {loading && <p>Loading...</p>}
 

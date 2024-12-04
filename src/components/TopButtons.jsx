@@ -1,6 +1,6 @@
 import React from "react";
 
-function TopButtons({ setQuery }) {
+function TopButtons({ setQuery, setTopButton }) {
   const cities = [
     {
       id: 1,
@@ -26,6 +26,7 @@ function TopButtons({ setQuery }) {
 
   const handleButtonCLick= (city)=>{
     setQuery({ q: city.title })
+    setTopButton(city.title)
     // setCity(city.title)
   }
 
@@ -36,7 +37,8 @@ function TopButtons({ setQuery }) {
         <button
           key={city.id}
           className="text-white bg-blue-700 dark:hover:bg-yellow-700 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2  "
-          onClick={()=>setQuery({ q: city.title })}
+          // onClick={()=>setQuery({ q: city.title })}
+          onClick={()=>handleButtonCLick(city)}
         >
           {city.title}
         </button>

@@ -1,17 +1,28 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { UilSearch, UilLocationPoint } from "@iconscout/react-unicons";
 import { toast } from "react-toastify";
 
 
-function Inputs({ setQuery, setUnits,setError  }) {
-  const [city, setCity] = useState("");
+function Inputs({ setQuery, setUnits,setError, topButton,setTopButton  }) {
+  console.log(topButton,"topbutton")
+  const [city, setCity] = useState(topButton || "");
   const [suggestions, setSuggestions] = useState([]);
+
+  // Update city if topButton changes
+  useEffect(() => {
+    if (topButton && topButton !== city) {
+      setCity(topButton);
+      setTopButton(null)
+    }
+  }, [topButton, city]);
+  
 
   const fetchCitySuggestions = async (query) => {
     if (!query || query.trim() === "") {
       setSuggestions([]);
       return;
     }
+    
     console.log(query,"city")
 
     const url = 'https://wft-geo-db.p.rapidapi.com/v1/geo/cities';
@@ -64,7 +75,7 @@ function Inputs({ setQuery, setUnits,setError  }) {
   };
 
   const handleInputChange = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const value = e.target.value;
     setCity(value);
     console.log(city,"input xity")
